@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        body{
+            width: 100%;
+            margin: 0; padding: 0;
+            background-color: black;
+        }
+        
+        /*header*/
+        header{
+            background-color: rgb(56, 54, 54);
+            height: 45px;
+            text-align: center; 
+             }
+
+        header ul{
+            margin: 0;
+            padding: 0;
+            width: 100%;      
+        }
+
+        header ul li{
+            display: inline-block;
+            list-style-type: none;
+            padding: 8px 70px;
+            color: rgb(209, 206, 206);
+            font-size: 14.5px;  
+        }
+        
+        header ul li a{
+            
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        
+        header ul li a:link{color: rgb(209, 206, 206);}
+        
+        header ul li a:hover{
+            color:white;
+            font-size: 130%;
+        }
+
+        header a:visited{color: rgb(209, 206, 206)}
+
+        /* nav*/
+        nav{width: 100%;
+            height: 50px;
+            text-align: right ;
+            background-color: black;
+            color: white;
+            }
+
+        /*section one*/
+        #one{background-color: rgb(2, 2, 2);
+            color: white;
+            text-align: center;
+            width: 100%;
+            }
+        .a{font-size: 50px;
+            font-weight: 900;
+            text-align: center;
+            padding-top: 20px;}
+
+        .b{font-size: 30px;
+            font-weight: 400;}
+
+        .c{font-size: 20px;
+            font-weight: 200;}
+        /*section two*/
+        #two{
+            background-image: url(medias/오리.jpg);
+            background-repeat: no-repeat;
+            background-size: 800px 500px;
+            background-position: right bottom;
+            background-color: white;
+            color: black;
+            padding-bottom: 40px;
+        }
+        table{
+            text-align: center;
+            margin-left: 30px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        tr{height: 45px;;}
+        tr:hover{color:violet;}
+                
+      .d{width: 80%;}
+      .e{width} 
+        /*section three*/
+        
+      #three{background-color: rgb(2, 2, 2);
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 80px;
+            }  
+        div{
+            margin: 50px 0px;
+            display: inline;
+            width: 60px;
+            height: 10px;
+            padding: 40px;
+        }
+        div img{
+            width: 300px;
+            height: 300px;
+            border-radius: 40px 40px 40px 40px;
+            box-shadow: 2px 2px 2px 2px,
+                        0 0 10px rgb(157, 255, 0),
+                        0 0 15px orange; 
+        }
+       
+        div span img{margin-bottom: 0px;
+            margin-top: 30px;
+            }
+        /*section four*/
+        #four{
+            background-image: url(medias/어몽어스.png);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            background-color: white;
+            color: black;
+            
+        }
+        #int{font-size: 20px;
+            text-align: center;
+            font-weight: 500;}
+            video { width: 90%; height: 70%;overflow: hidden;
+                margin-left: 50px;}
+        /*section five*/
+        #five{
+            background-color: black;
+            color: white;
+        }
+            .end{
+                text-align: center;
+                font-size: 40px;
+                font-weight: 700;
+                
+            }
+        footer{
+            text-align: right;
+            font-size: 12px;
+            background-color: black;
+            color: white;
+        }
+    #clock{
+        font-size: 20px;
+        border: 2px solid rgb(65, 63, 63);
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    #tran:hover{
+            transform: scale(110%);
+            transition:  1s;
+        }
+    #home{width: 55%;}
+    #home:hover{ transform: scale(105%);
+            transition:  1.5s;
+
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><div style="font-size: 18px;">
+                <a><i class="fab fa-apple"></i></a>
+            </div></li>
+            <li><a href="#one">Home</a></li>
+            <li><a href="#two">profile</a></li>
+            <li><a href="#three">favorite</a></li>
+            <li><a href="#four">introduce</a></li>
+            <li><a href="#five">end</a></li>
+            <li><a>← Qucik menu</a></li>
+
+        </ul>
+    </header>
+    <nav>Time<br>
+        <span id="clock"></span>
+        <script>
+            setClock();
+            
+            var clockInterval = setInterval(function(){
+                setClock();
+            }, 1000);
+            function setClock() {
+                var date = new Date();
+                var datetext = date.getHours() +':'+ date.getMinutes() + ':'+ date.getSeconds() ;
+                document.getElementById('clock').innerHTML = datetext;
+            }
+        </script>
+    </nav>
+    <section id="one"><p class="a">Home</p><p class="b">202144023최지혁의 자기소개에</p><p class="c">당신을 초대합니다.</p><br>
+    <img id="home" src="medias/home.png"></section>
+
+    <section id="two"><p class="a">profile</p>
+        <table>
+            <tbody>
+                <br>
+                <tr><td class="d">이름</td><td class="e">최지혁</td></tr><br>
+                <tr><td class="d">출생</td><td class="e">1999년 9월 14일</td></tr>
+                <tr><td class="d">출신</td><td class="e">전라북도 전주시</td></tr>
+                <tr><td class="d">거주지</td><td class="e">인천 미추홀구</td></tr>
+                <tr><td class="d">가족</td><td class="e">본인,형,엄마,아빠,고양이</td></tr>
+                <tr><td class="d">신체</td><td class="e">177cm 70kg</td></tr>
+                <tr><td class="d">학력</td><td class="e">
+                전주 화산초 졸업<br>전주 신흥중 졸업<br> 전주 신흥고 졸업<br> 전주대학교 중퇴<br> 인하공전 재학</td></tr>
+                <tr><td class="d">이메일</td><td class="e">wlgur0914@naver.com</td></tr>
+                <tr><td class="d">번호</td><td class="e">010 8554 1272</td></tr>
+            </tbody>
+        </table>
+        <br><br>
+        
+    </section>
+
+    <section id="three"><p class="a">favorite</p><P></P><p></p>
+        <div><span>
+            <div><img id="tran" src="medias/영화.jfif"></div>영화
+            <div><img id="tran" src="medias/유투브.jfif"></div>유투브
+            <div><img id="tran" src="medias/게임.jfif"></div></span>게임
+            </div><br><br><br><br><br>
+        <div><span>
+            <div><img id="tran" src="medias/고양이.jfif"></div>고양이
+            <div><img id="tran" src="medias/음악.jfif"></div>음악듣기
+            <div><img id="tran" src="medias/운동.jpg"></div>운동
+            </span>
+        </div>
+
+    </section>
+
+    <section id="four"><p class="a">introduce</p>
+        <br>
+        <p id="int"><th>안녕하세요.제 이름은 최지혁입니다. 본 고향은 전주이지만, 현재는 인하공전 후문쪽에서 자취를 하고 있습니다. <br><br>
+            저의 취미는 드라마나 영화감상 또는 음악을 듣는것을 좋아합니다. 대체적으로 혼자 있는것을 좋아하는거 같습니다.<br><br>
+            저의 가족구성원은 엄마, 아빠, 형, 고양이 두마리, 그리고 저 이렇게 화목하게 살고있습니다.<br><br>
+            저의 장점이라고 하면 긍정적으로 삶을 바라보려고 노력하고 실천하려고 하는것 입니다.<br><br>
+            저의 단점이라고 하면 일을 미루고 게을른거 같습니다. 고치려고 노력중입니다.<br><br>
+            제가 추구하고 원하는 삶은 남들이 보기에 진짜 바쁘고 체계적이며 의미있으며 노력하는 삶입니다. <br><br>
+            제가 컴퓨터 정보과에 오게 된 이유는 군 복무중에 훈련소에서 컴퓨터에 관한 책을 읽어 흥미가 생겨 오게되었습니다.<br><br>
+            저는 1999년 생으로써 올해 23살로 작년에 군복무를 마치고 신입생치고 조금 늦은나이에 입학을 하게 되었습니다.<br><br>
+            그래서 열심히 노력하고 최선을 다해 제가 이루고자 하는 바를 모두 이루는 사람이 되고자 합니다. <br>
+            <br><br><br><br><br><br><br></th></p>
+        
+
+    </section>
+<section id="five"><p class="a">end</p>
+    <p class="end">감사합니다</p>
+    <div>
+        <video muted autoplay loop>
+            <source src="medias/bye.mp4">
+    </div>
+    
+</section>
+<footer>
+Reference © 2021 Apple Inc. 
+</footer>
+    
+    
+</body>
+</html>
